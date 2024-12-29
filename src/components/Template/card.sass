@@ -1,0 +1,29 @@
+.card
+    display: flex
+    flex-direction: column
+    justify-content: center
+    flex: 1 0 auto
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+    background-color: #fff
+    transition: 0.3s
+
+    &:hover
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)
+
+    .card-header
+        padding: 1rem 3rem
+        font-size: 20px
+        font-weight: 600
+        margin-bottom: 10px
+        border-bottom: 1px solid var(--secondary-color)
+        font-weight: normal
+
+    .card-body
+        padding: 1rem 3rem
+        margin-bottom: 10px
+    .card-footer
+        display: flex
+        justify-content: flex-end
+        gap: .7rem
+        padding: 1rem 3rem
+        color: #666
