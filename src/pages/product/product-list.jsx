@@ -5,7 +5,6 @@ import Icon from "../../components/Template/Icon";
 import { Link } from "react-router-dom";
 import { products } from "./product-data";
 
-
 const ProductList = () => {
   return (
     <>
@@ -15,7 +14,12 @@ const ProductList = () => {
           placeholder="Search for a product..."
           inputGrouId="search"
           inputType="text"
-          inputGroupClass="flex-grow-1"
+          GroupClass="flex-grow-1"
+          inputProps={{
+            onChange: () => {
+              console.log("input change");
+            },
+          }}
         />
         <InputGroup
           labelContent="Initial Date"
@@ -27,8 +31,20 @@ const ProductList = () => {
           inputGrouId="date"
           inputType="date"
         />
+        <div>
+          <Button className="btn-primary">
+            search
+            <Icon name="icon-search" />
+          </Button>
+        </div>
       </div>
       <div className="product-table">
+        <div className="add-product">
+          <Button>
+            New product
+            <Icon name="icon-plus-circle" />
+          </Button>
+        </div>
         <table>
           <thead>
             <tr>
@@ -48,7 +64,7 @@ const ProductList = () => {
                 <td>{product.quantity}</td>
                 <td>{product.total}</td>
                 <td>
-                  <Link to={`/products/${product.id}`}>
+                  <Link to={`/products/${product.id}`} className="btn-primary">
                     <Icon name="icon-edit-3" />
                   </Link>
                 </td>

@@ -70,6 +70,15 @@ h1
 			border-radius: 2px
 			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1)
 
+			button
+				display: flex
+				align-items: center
+				margin-top: 3rem
+				padding: 12.5px 16px
+				svg
+					margin-left: 1rem
+					font-size: 1.8rem
+
 		.product-table
 			display: flex
 			flex: 1 1 100%
@@ -79,7 +88,14 @@ h1
 			background-color: white
 			border-radius: 2px
 			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1)
-			
+			.add-product
+				display: flex
+				justify-content: flex-end
+				button
+					display: flex
+					svg
+						margin-left: 1rem
+						font-size: 1.8rem
 			table
 				width: 100%
 				border-collapse: collapse
@@ -105,7 +121,7 @@ h1
 		flex: 1 1 100%
 
 
-button
+button, .btn-primary
 	display: flex
 	align-items: flex-start
 	border: none
@@ -129,3 +145,6 @@ button
 			background-color: adjust(#ff5c5c, 40%)
 		&:focus
 			outline: none
+
+a.btn-primary
+	display: inline-flex
