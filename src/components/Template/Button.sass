@@ -1,0 +1,27 @@
+button, .btn-primary
+	display: flex
+	align-items: flex-start
+	border: none
+	border-radius: 2px
+	padding: 10px 16px
+	font-size: 16px
+	cursor: pointer
+	background-color: var(--secondary-color)
+	color: white
+	svg
+		//margin-right: .7rem
+		fill: white
+	&:hover
+		background-color: adjust(--secondary-color, 40%)
+	&:focus
+		outline: none
+
+	&.btn-danger
+		background-color: var(--danger-color)
+		&:hover
+			background-color: adjust(#ff5c5c, 40%)
+		&:focus
+			outline: none
+            
+a.btn-primary
+	display: inline-flex

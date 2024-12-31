@@ -1,3 +1,4 @@
+import "./Button.sass"
 
 const Button = (props) => {
   return (

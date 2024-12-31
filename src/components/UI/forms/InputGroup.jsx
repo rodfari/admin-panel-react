@@ -2,7 +2,6 @@ import Input from "../../Template/Input"
 import Label from "../../Template/Label"
 
 const InputGroup = (props) => {
-  console.log(props.inputProps);
   return (
     <div className={`input-group ${ props.GroupClass ?? '' }`}>
         <Label htmlFor={props.inputGrouId}>{ props.labelContent }</Label>

@@ -1,4 +1,4 @@
-import "./card.sass";
+import "./Card.sass";
 import GoBackButton from "./GoBackButton";
 import Icon from "./Icon";
 

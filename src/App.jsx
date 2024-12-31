@@ -1,5 +1,4 @@
 import { RouterProvider } from 'react-router-dom'
-import './App.sass'
 import { AppRouter } from './routes'
 
 function App() {
