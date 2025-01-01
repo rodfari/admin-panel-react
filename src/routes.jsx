@@ -5,13 +5,14 @@ import Layout from "./pages/Layout";
 import Product from "./pages/product/Product";
 import Orders from "./pages/Orders";
 import Customers from "./pages/Customers";
+import Auth from "./pages/auth/Auth";
 
 export const AppRouter = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
 
-    action: () => {}, 
+    action: () => {},
     children: [
       {
         path: "/",
@@ -27,8 +28,9 @@ export const AppRouter = createBrowserRouter([
       },
       {
         path: "customers",
-        element: <Customers />
-      }
+        element: <Customers />,
+      },
     ],
   },
+  { path: "auth", element: <Auth /> },
 ]);

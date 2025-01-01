@@ -32,13 +32,12 @@ h1
 
 	.content
 		display: flex
-		flex-wrap: wrap
+		flex-direction: column
 		flex: 0 1 83%
 		align-content: flex-start
 	.content-header
 		display: flex
 		align-items: center
-		flex: 1 1 100%
 		height: 3rem
 		padding: 1.5rem
 		color: white
@@ -46,15 +45,14 @@ h1
 
 	.content-body
 		display: flex
-		flex-wrap: wrap
-		flex: 1 1 100%
+		flex-direction: column
+		flex-grow: 1
 		padding: 1.5rem
 		background-color: white
 
 		.filter
 			display: flex
 			gap: 1rem
-			flex: 0 1 100%
 			margin-bottom: 1.5rem
 			padding: 1.5rem
 			background-color: white
@@ -107,7 +105,6 @@ h1
 
 	.content-footer
 		display: flex
-		flex: 1 1 100%
-
+		flex-direction: row
 
 
