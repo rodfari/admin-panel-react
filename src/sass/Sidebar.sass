@@ -17,6 +17,7 @@
             padding: 0
             color: white
             cursor: pointer
+        
         a
             transition: color 0.5s ease, background-color 0.5s ease
             display: flex
@@ -26,6 +27,8 @@
             text-decoration: none
             width: auto
             height: 30px
+
+            
             &:hover
                 background-color: var(--secondary-color)
                 color: white
@@ -34,7 +37,33 @@
                 fill: white
                 font-size: 2.1rem
                 margin-right: 1rem
-                
+
+        .has-submenu
+            transition: color 0.5s ease, background-color 0.5s ease
+            display: flex
+            flex-direction: column
+            width: 100%
+            height: auto
+            padding: 1rem 0
+            li
+                // display: none
+                display: flex
+                justify-content: center
+                align-items: center
+                background-color: var(--dark-grey)
+                a
+                    width: 100%
+
+            &__header
+                padding-left: 2rem
+            .icon
+                fill: white
+                font-size: 2.1rem
+                margin-right: 1rem
+            &:hover
+                background-color: var(--secondary-color)
+                color: white
+
 .active-button
     background-color: var(--secondary-color)
     color: white
@@ -49,5 +78,19 @@
     color: white
     height: 6rem
     background-color: var(--ligth-grey)
-
-
+    
+// .has-submenu
+//     transition: color 0.5s ease, background-color 0.5s ease
+//     background-color: var(--secondary-color)
+//     padding: 1rem 2rem
+//     align-items: center
+//     .icon
+//         // stroke: white
+//         fill: white
+//         font-size: 2.1rem
+//         margin-right: 1rem
+//     ul
+//         display: flex
+//         flex: 1 1 100%
+.hide
+    display: none !important

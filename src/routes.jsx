@@ -3,9 +3,11 @@ import { createBrowserRouter } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Layout from "./pages/Layout";
 import Product from "./pages/product/Product";
-import Orders from "./pages/Orders";
+import Blog from "./pages/Blog";
 import Customers from "./pages/Customers";
 import Auth from "./pages/auth/Auth";
+import BlogPosts from "./pages/BlogPosts";
+import BlogPost from "./pages/BlogPost";
 
 export const AppRouter = createBrowserRouter([
   {
@@ -23,8 +25,18 @@ export const AppRouter = createBrowserRouter([
         element: <Product />,
       },
       {
-        path: "orders",
-        element: <Orders />,
+        path: "blog",
+        element: <Blog />,
+        children: [
+          {
+            path: "posts",
+            element: <BlogPosts />
+          },
+          {
+            path: "new",
+            element: <BlogPost />
+          }
+        ]
       },
       {
         path: "customers",

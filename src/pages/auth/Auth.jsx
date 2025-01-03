@@ -16,8 +16,14 @@ const Auth = () => {
             Admin<span>Panel</span>
           </h1>
           <form>
-            <input type="text" placeholder="Username" />
+            <input type="email" placeholder="Email" />
+            <div className="error"> 
+              User must be at least 2 characters long.
+            </div>
             <input type="password" placeholder="Password" />
+            <div className="error">
+              Password must be at least 6 characters long.
+            </div>
             <button>
               <Icon name="icon-log-in" /> &nbsp; Login
             </button>
