@@ -7,8 +7,9 @@ import Icon from "../components/Template/Icon";
 const BlogPosts = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    getPosts().then((posts) => {
-      setPosts(posts);
+    new Promise(async (resolve, reject) => {
+      console.log(resolve, reject);
+      setPosts(await getPosts());
     });
   }, []);
   return (
@@ -25,7 +26,6 @@ const BlogPosts = () => {
             <tr>
               <th>Title</th>
               <th>Content</th>
-              <th>Published</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -34,10 +34,8 @@ const BlogPosts = () => {
               <tr key={post.id}>
                 <td>{post.title}</td>
                 <td>{post.body}</td>
-                <td>{post.published}</td>
                 <td>
-                  <Link to={`/blog/${post.id}`}>View</Link>
-                  <Link to={`/blog/${post.id}/edit`}>Edit</Link>
+                  <Link to={`/blog/post/${post.id}`}>View</Link>
                 </td>
               </tr>
             ))}

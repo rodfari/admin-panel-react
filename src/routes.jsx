@@ -33,6 +33,10 @@ export const AppRouter = createBrowserRouter([
             element: <BlogPosts />
           },
           {
+            path: "post/:id?",
+            element: <BlogPost />
+          },
+          {
             path: "new",
             element: <BlogPost />
           }
